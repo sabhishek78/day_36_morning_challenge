@@ -25,20 +25,10 @@ class Account{
   List<String> emails=[];
   Account(this.name, this.emails);
   ifNameMatching(Account other){
-    if(this.name==other.name){
-      return true; // return true for name matching
-    }
-    else{
-      return false;
-    }
+    return this.name==other.name;
   }
   ifEmailMatching(Account other){
-    for(int i=0;i<this.emails.length;i++){
-      if(other.emails.contains(this.emails[i])){
-        return true;
-      }
-    }
-    return false;
+    return other.emails.contains(this.emails[i]);
   }
  Account mergeAccounts(Account other){
     this.emails.addAll(other.emails);
